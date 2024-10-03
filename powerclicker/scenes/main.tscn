@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://b1m33vb1mh7wr"]
+[gd_scene load_steps=2 format=3 uid="uid://b1m33vb1mh7wr"]
+
+[ext_resource type="PackedScene" uid="uid://de2me0flre225" path="res://scenes/shop.tscn" id="1_54ehq"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -17,6 +19,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 2
+
+[node name="Shop" parent="Right_Container" instance=ExtResource("1_54ehq")]
+layout_mode = 1
 
 [node name="Left_Container" type="Control" parent="."]
 custom_minimum_size = Vector2(200, 0)
