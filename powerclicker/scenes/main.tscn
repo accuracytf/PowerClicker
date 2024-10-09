@@ -22,6 +22,7 @@ grow_vertical = 2
 
 [node name="Shop" parent="Right_Container" instance=ExtResource("1_54ehq")]
 layout_mode = 1
+offset_right = 0.0
 
 [node name="Left_Container" type="Control" parent="."]
 custom_minimum_size = Vector2(200, 0)
@@ -36,5 +37,7 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_bottom = 200.0
+offset_left = -376.0
+offset_right = 376.0
+offset_bottom = 150.0
 grow_horizontal = 2

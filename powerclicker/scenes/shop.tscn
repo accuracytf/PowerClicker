@@ -1,7 +1,48 @@
-[gd_scene load_steps=2 format=3 uid="uid://de2me0flre225"]
+[gd_scene load_steps=18 format=3 uid="uid://de2me0flre225"]
+
+[ext_resource type="Script" path="res://scenes/shop.gd" id="1_fi3cu"]
+[ext_resource type="Texture2D" uid="uid://cufhs75mk7ir8" path="res://sprites/green.png" id="1_p5c14"]
+[ext_resource type="Texture2D" uid="uid://c15e6oya5mwqc" path="res://sprites/red.png" id="2_wxvjw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_afl11"]
 font_size = 48
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3jcr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6074k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fbkll"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tue4i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bt1hp"]
+
+[sub_resource type="Theme" id="Theme_spnmi"]
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_w3jcr")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_6074k")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_fbkll")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_tue4i")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_bt1hp")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ivymj"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_srhg0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tufnj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_272du"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4euqa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_11bn3"]
+
+[sub_resource type="Theme" id="Theme_i51tm"]
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_srhg0")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_tufnj")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_272du")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_4euqa")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_11bn3")
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -11,6 +52,7 @@ anchor_bottom = 1.0
 offset_right = -952.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fi3cu")
 
 [node name="Title" type="Label" parent="."]
 custom_minimum_size = Vector2(0, 100)
@@ -24,25 +66,220 @@ label_settings = SubResource("LabelSettings_afl11")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Green_Upgrades" type="VScrollBar" parent="."]
-custom_minimum_size = Vector2(0, 200)
+[node name="ScrollContainer_Green" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 148.0
+offset_right = 200.0
+offset_bottom = 388.0
+theme = SubResource("Theme_spnmi")
+
+[node name="VBoxContainer_Green" type="VBoxContainer" parent="ScrollContainer_Green"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect_Solar" type="TextureRect" parent="ScrollContainer_Green/VBoxContainer_Green"]
+layout_mode = 2
+texture = ExtResource("1_p5c14")
+
+[node name="Label" type="Label" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Solar"]
 layout_mode = 1
-anchors_preset = 14
+offset_left = 7.0
+offset_right = 94.0
+offset_bottom = 23.0
+text = "Solar Panel"
+label_settings = SubResource("LabelSettings_ivymj")
+
+[node name="Button" type="Button" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Solar"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = -176.0
-offset_bottom = 74.0
-grow_horizontal = 2
+offset_left = -60.0
+offset_top = -9.0
+offset_right = -8.0
+offset_bottom = 9.0
+grow_horizontal = 0
 grow_vertical = 2
+text = "100kr"
 
-[node name="Red_Upgrades" type="VScrollBar" parent="."]
-custom_minimum_size = Vector2(0, 250)
+[node name="TextureRect_Wind" type="TextureRect" parent="ScrollContainer_Green/VBoxContainer_Green"]
+layout_mode = 2
+texture = ExtResource("1_p5c14")
+
+[node name="Label" type="Label" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Wind"]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+offset_left = 7.0
+offset_right = 94.0
+offset_bottom = 23.0
+text = "Wind Turbines"
+label_settings = SubResource("LabelSettings_ivymj")
+
+[node name="Button" type="Button" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Wind"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -8.0
-grow_horizontal = 2
-grow_vertical = 0
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -9.0
+offset_right = -8.0
+offset_bottom = 9.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "100kr"
+
+[node name="TextureRect_Hydro" type="TextureRect" parent="ScrollContainer_Green/VBoxContainer_Green"]
+layout_mode = 2
+texture = ExtResource("1_p5c14")
+
+[node name="Label" type="Label" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Hydro"]
+layout_mode = 1
+offset_left = 7.0
+offset_right = 94.0
+offset_bottom = 23.0
+text = "Hydroelectric"
+label_settings = SubResource("LabelSettings_ivymj")
+
+[node name="Button" type="Button" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Hydro"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -9.0
+offset_right = -8.0
+offset_bottom = 9.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "100kr"
+
+[node name="TextureRect_Hydro2" type="TextureRect" parent="ScrollContainer_Green/VBoxContainer_Green"]
+layout_mode = 2
+texture = ExtResource("1_p5c14")
+
+[node name="Label" type="Label" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Hydro2"]
+layout_mode = 1
+offset_left = 7.0
+offset_right = 94.0
+offset_bottom = 23.0
+text = "Hydroelectric"
+label_settings = SubResource("LabelSettings_ivymj")
+
+[node name="Button" type="Button" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Hydro2"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -9.0
+offset_right = -8.0
+offset_bottom = 9.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "100kr"
+
+[node name="ScrollContainer_Red" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 408.0
+offset_right = 200.0
+offset_bottom = 648.0
+theme = SubResource("Theme_i51tm")
+
+[node name="VBoxContainer_Red" type="VBoxContainer" parent="ScrollContainer_Red"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect_Coal" type="TextureRect" parent="ScrollContainer_Red/VBoxContainer_Red"]
+layout_mode = 2
+texture = ExtResource("2_wxvjw")
+
+[node name="Label" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Coal"]
+layout_mode = 1
+offset_left = 7.0
+offset_right = 94.0
+offset_bottom = 23.0
+text = "Coal Plant
+"
+label_settings = SubResource("LabelSettings_ivymj")
+
+[node name="Button" type="Button" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Coal"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -9.0
+offset_right = -8.0
+offset_bottom = 9.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "100kr"
+
+[node name="TextureRect_Gas" type="TextureRect" parent="ScrollContainer_Red/VBoxContainer_Red"]
+layout_mode = 2
+texture = ExtResource("2_wxvjw")
+
+[node name="Label" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Gas"]
+layout_mode = 1
+offset_left = 7.0
+offset_right = 94.0
+offset_bottom = 23.0
+text = "Gas Plant
+"
+label_settings = SubResource("LabelSettings_ivymj")
+
+[node name="Button" type="Button" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Gas"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -9.0
+offset_right = -8.0
+offset_bottom = 9.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "100kr"
+
+[node name="TextureRect_Oil" type="TextureRect" parent="ScrollContainer_Red/VBoxContainer_Red"]
+layout_mode = 2
+texture = ExtResource("2_wxvjw")
+
+[node name="Label" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Oil"]
+layout_mode = 1
+offset_left = 7.0
+offset_right = 94.0
+offset_bottom = 23.0
+text = "Oil Plant
+"
+label_settings = SubResource("LabelSettings_ivymj")
+
+[node name="Button" type="Button" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Oil"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -9.0
+offset_right = -8.0
+offset_bottom = 9.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "100kr"
