@@ -1,10 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://jj5m3peh4a07"]
+[gd_scene format=3 uid="uid://bu0un8mp6fp1i"]
 
-[ext_resource type="Texture2D" uid="uid://cxq3xyamxarl6" path="res://sprites/7078923.png" id="1_k2fnr"]
-
-[node name="Clicker" type="Node2D"]
-
-[node name="7078923" type="Sprite2D" parent="."]
-position = Vector2(523, 451)
-scale = Vector2(0.664063, 0.714844)
-texture = ExtResource("1_k2fnr")
+[node name="Node2D" type="Node2D"]
