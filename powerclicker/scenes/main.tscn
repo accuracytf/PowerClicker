@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1m33vb1mh7wr"]
+[gd_scene load_steps=4 format=3 uid="uid://b1m33vb1mh7wr"]
 
 [ext_resource type="PackedScene" uid="uid://de2me0flre225" path="res://scenes/shop.tscn" id="1_54ehq"]
+[ext_resource type="Script" path="res://scenes/clicker_container.gd" id="2_cyt1b"]
+[ext_resource type="Texture2D" uid="uid://cxq3xyamxarl6" path="res://sprites/7078923.png" id="3_28rb2"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -31,6 +33,27 @@ anchors_preset = 9
 anchor_bottom = 1.0
 grow_vertical = 2
 
+[node name="Clicker_Container" type="Control" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 230.0
+offset_top = 142.0
+offset_right = 940.0
+offset_bottom = 1.0
+grow_vertical = 2
+script = ExtResource("2_cyt1b")
+
+[node name="Button" type="Button" parent="Clicker_Container"]
+layout_mode = 0
+offset_left = -19.0
+offset_top = -8.0
+offset_right = 697.0
+offset_bottom = 508.0
+icon = ExtResource("3_28rb2")
+icon_alignment = 1
+
 [node name="Top_container" type="Control" parent="."]
 custom_minimum_size = Vector2(752, 150)
 layout_mode = 1
@@ -41,3 +64,5 @@ offset_left = -376.0
 offset_right = 376.0
 offset_bottom = 150.0
 grow_horizontal = 2
+
+[connection signal="pressed" from="Clicker_Container/Button" to="Clicker_Container" method="_on_button_pressed"]
