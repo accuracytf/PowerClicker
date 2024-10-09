@@ -9,12 +9,15 @@ var clicked = false
 var amount = 1;
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if(clicked == true): push_warning("hej")
+	var labeltext = get_node("../Left_Container/Money")
+	if(clicked == true): 
+		Globals.Money += 1
+		labeltext.text = "Money: " + str(Globals.Money)
+		clicked = false
+
 	
 	pass
 
-
-func _on_button_pressed() -> void:
+func _on_click() -> void:
 	clicked = true
-	
 	pass # Replace with function body.
