@@ -1,11 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://de2me0flre225"]
+[gd_scene load_steps=18 format=3 uid="uid://de2me0flre225"]
 
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_fi3cu"]
-[ext_resource type="Texture2D" uid="uid://dp2ugeapl7710" path="res://sprites/solar.png" id="2_lcpw3"]
+[ext_resource type="Texture2D" uid="uid://cufhs75mk7ir8" path="res://sprites/green.png" id="1_p5c14"]
 [ext_resource type="Texture2D" uid="uid://c15e6oya5mwqc" path="res://sprites/red.png" id="2_wxvjw"]
-[ext_resource type="Texture2D" uid="uid://bb1jq8rr06clk" path="res://sprites/hydro-power.png" id="3_gpyaw"]
-[ext_resource type="Texture2D" uid="uid://df1pyxqf8euvn" path="res://sprites/windturbine.png" id="3_ooq4s"]
-[ext_resource type="Texture2D" uid="uid://bck0goejrc26e" path="res://sprites/coal_power.png" id="5_4s3d7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_afl11"]
 font_size = 48
@@ -84,7 +81,7 @@ size_flags_vertical = 3
 
 [node name="TextureRect_Solar" type="TextureRect" parent="ScrollContainer_Green/VBoxContainer_Green"]
 layout_mode = 2
-texture = ExtResource("2_lcpw3")
+texture = ExtResource("1_p5c14")
 
 [node name="Label" type="Label" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Solar"]
 layout_mode = 1
@@ -111,7 +108,7 @@ text = "100kr"
 
 [node name="TextureRect_Wind" type="TextureRect" parent="ScrollContainer_Green/VBoxContainer_Green"]
 layout_mode = 2
-texture = ExtResource("3_ooq4s")
+texture = ExtResource("1_p5c14")
 
 [node name="Label" type="Label" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Wind"]
 layout_mode = 1
@@ -138,7 +135,7 @@ text = "100kr"
 
 [node name="Hydroelectric" type="TextureRect" parent="ScrollContainer_Green/VBoxContainer_Green"]
 layout_mode = 2
-texture = ExtResource("3_gpyaw")
+texture = ExtResource("1_p5c14")
 
 [node name="Label" type="Label" parent="ScrollContainer_Green/VBoxContainer_Green/Hydroelectric"]
 layout_mode = 1
@@ -178,7 +175,7 @@ size_flags_vertical = 3
 
 [node name="TextureRect_Coal" type="TextureRect" parent="ScrollContainer_Red/VBoxContainer_Red"]
 layout_mode = 2
-texture = ExtResource("5_4s3d7")
+texture = ExtResource("2_wxvjw")
 
 [node name="Label" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Coal"]
 layout_mode = 1

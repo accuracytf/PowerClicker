@@ -1,11 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://de2me0flre225"]
+[gd_scene load_steps=18 format=3 uid="uid://de2me0flre225"]
 
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_fi3cu"]
-[ext_resource type="Texture2D" uid="uid://dp2ugeapl7710" path="res://sprites/solar.png" id="2_lcpw3"]
+[ext_resource type="Texture2D" uid="uid://cufhs75mk7ir8" path="res://sprites/green.png" id="1_p5c14"]
 [ext_resource type="Texture2D" uid="uid://c15e6oya5mwqc" path="res://sprites/red.png" id="2_wxvjw"]
-[ext_resource type="Texture2D" uid="uid://bb1jq8rr06clk" path="res://sprites/hydro-power.png" id="3_gpyaw"]
-[ext_resource type="Texture2D" uid="uid://df1pyxqf8euvn" path="res://sprites/windturbine.png" id="3_ooq4s"]
-[ext_resource type="Texture2D" uid="uid://bck0goejrc26e" path="res://sprites/coal_power.png" id="5_4s3d7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_afl11"]
 font_size = 48
@@ -84,13 +81,18 @@ size_flags_vertical = 3
 
 [node name="TextureRect_Solar" type="TextureRect" parent="ScrollContainer_Green/VBoxContainer_Green"]
 layout_mode = 2
-texture = ExtResource("2_lcpw3")
+texture = ExtResource("1_p5c14")
 
 [node name="Label" type="Label" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Solar"]
 layout_mode = 1
-offset_left = 7.0
-offset_right = 94.0
-offset_bottom = 23.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -90.0
+offset_top = 2.0
+offset_right = -3.0
+offset_bottom = 25.0
+grow_horizontal = 0
 text = "Solar Panel"
 label_settings = SubResource("LabelSettings_ivymj")
 
@@ -101,17 +103,17 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -60.0
-offset_top = -9.0
-offset_right = -8.0
-offset_bottom = 9.0
+offset_left = -70.0
+offset_top = -8.0
+offset_right = -18.0
+offset_bottom = 23.0
 grow_horizontal = 0
 grow_vertical = 2
 text = "100kr"
 
 [node name="TextureRect_Wind" type="TextureRect" parent="ScrollContainer_Green/VBoxContainer_Green"]
 layout_mode = 2
-texture = ExtResource("3_ooq4s")
+texture = ExtResource("1_p5c14")
 
 [node name="Label" type="Label" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Wind"]
 layout_mode = 1
@@ -138,7 +140,7 @@ text = "100kr"
 
 [node name="Hydroelectric" type="TextureRect" parent="ScrollContainer_Green/VBoxContainer_Green"]
 layout_mode = 2
-texture = ExtResource("3_gpyaw")
+texture = ExtResource("1_p5c14")
 
 [node name="Label" type="Label" parent="ScrollContainer_Green/VBoxContainer_Green/Hydroelectric"]
 layout_mode = 1
@@ -149,6 +151,33 @@ text = "Hydroelectric"
 label_settings = SubResource("LabelSettings_ivymj")
 
 [node name="Button" type="Button" parent="ScrollContainer_Green/VBoxContainer_Green/Hydroelectric"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -9.0
+offset_right = -8.0
+offset_bottom = 9.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "100kr"
+
+[node name="TextureRect_Nuclear" type="TextureRect" parent="ScrollContainer_Green/VBoxContainer_Green"]
+layout_mode = 2
+texture = ExtResource("1_p5c14")
+
+[node name="Label" type="Label" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Nuclear"]
+layout_mode = 1
+offset_left = 7.0
+offset_right = 94.0
+offset_bottom = 23.0
+text = "Nuclear"
+label_settings = SubResource("LabelSettings_ivymj")
+
+[node name="Button" type="Button" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Nuclear"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -178,7 +207,7 @@ size_flags_vertical = 3
 
 [node name="TextureRect_Coal" type="TextureRect" parent="ScrollContainer_Red/VBoxContainer_Red"]
 layout_mode = 2
-texture = ExtResource("5_4s3d7")
+texture = ExtResource("2_wxvjw")
 
 [node name="Label" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Coal"]
 layout_mode = 1
