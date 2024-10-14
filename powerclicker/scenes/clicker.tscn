@@ -1,3 +1,24 @@
-[gd_scene format=3 uid="uid://bu0un8mp6fp1i"]
+[gd_scene load_steps=3 format=3 uid="uid://brwbd56cm431w"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://gupx785iq6hv" path="res://sprites/Pixilart_selection.png" id="1_1vg4i"]
+[ext_resource type="Script" path="res://scripts/clicker.gd" id="1_r0f1u"]
+
+[node name="Clicker" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r0f1u")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 3.0
+offset_top = -2.0
+offset_right = 303.0
+offset_bottom = 266.0
+texture_normal = ExtResource("1_1vg4i")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_click"]
