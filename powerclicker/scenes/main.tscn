@@ -98,9 +98,8 @@ script = ExtResource("2_cyt1b")
 
 [node name="TextureButton" type="TextureButton" parent="Clicker_Container"]
 layout_mode = 0
-offset_left = 2.0
-offset_right = 595.0
-offset_bottom = 512.0
+offset_right = 593.0
+offset_bottom = 478.0
 texture_normal = ExtResource("3_28rb2")
 
 [node name="Top_container" type="Control" parent="."]
@@ -125,9 +124,9 @@ show_percentage = false
 
 [node name="ProgressBar2" type="ProgressBar" parent="Top_container"]
 layout_mode = 0
-offset_top = 24.0
+offset_top = 23.0
 offset_right = 650.0
-offset_bottom = 51.0
+offset_bottom = 50.0
 theme_override_styles/background = SubResource("StyleBoxFlat_smbmw")
 theme_override_styles/fill = SubResource("StyleBoxFlat_72rxi")
 show_percentage = false
