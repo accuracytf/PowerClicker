@@ -1,0 +1,143 @@
+[gd_scene load_steps=14 format=3 uid="uid://b1m33vb1mh7wr"]
+
+[ext_resource type="PackedScene" uid="uid://de2me0flre225" path="res://scenes/shop.tscn" id="1_54ehq"]
+[ext_resource type="Script" path="res://scripts/clicker_container.gd" id="2_cyt1b"]
+[ext_resource type="Script" path="res://scripts/date.gd" id="2_tnerf"]
+[ext_resource type="Texture2D" uid="uid://cxq3xyamxarl6" path="res://sprites/7078923.png" id="3_28rb2"]
+[ext_resource type="Script" path="res://scenes/top_container.gd" id="5_1fcrf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ry5bk"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_o4yec"]
+font_size = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wbe42"]
+bg_color = Color(0.581996, 0.583216, 0.741006, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xereu"]
+bg_color = Color(0, 0.631376, 0.973327, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_smbmw"]
+bg_color = Color(0.421764, 0.658606, 0.563335, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72rxi"]
+bg_color = Color(0, 0.719873, 0.336086, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ueq58"]
+bg_color = Color(0.89867, 0.447305, 0.382597, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g0jqo"]
+bg_color = Color(1, 0.333582, 0.350426, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Right_Container" type="Control" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Shop" parent="Right_Container" instance=ExtResource("1_54ehq")]
+layout_mode = 1
+offset_right = 0.0
+
+[node name="Left_Container" type="Control" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="Money" type="Label" parent="Left_Container"]
+layout_mode = 0
+offset_right = 291.0
+offset_bottom = 121.0
+text = "Money: 0"
+label_settings = SubResource("LabelSettings_ry5bk")
+autowrap_mode = 1
+
+[node name="Date" type="Control" parent="Left_Container"]
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 76.0
+offset_right = 308.0
+offset_bottom = 234.0
+script = ExtResource("2_tnerf")
+
+[node name="Date_Label" type="Label" parent="Left_Container/Date"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 25.0
+offset_right = 280.0
+offset_bottom = 205.0
+text = "Date: 0"
+label_settings = SubResource("LabelSettings_o4yec")
+
+[node name="Clicker_Container" type="Control" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 230.0
+offset_top = 142.0
+offset_right = 940.0
+offset_bottom = 1.0
+grow_vertical = 2
+script = ExtResource("2_cyt1b")
+
+[node name="TextureButton" type="TextureButton" parent="Clicker_Container"]
+layout_mode = 0
+offset_right = 593.0
+offset_bottom = 478.0
+texture_normal = ExtResource("3_28rb2")
+
+[node name="Top_container" type="Control" parent="."]
+custom_minimum_size = Vector2(752, 150)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -376.0
+offset_right = 376.0
+offset_bottom = 150.0
+grow_horizontal = 2
+script = ExtResource("5_1fcrf")
+
+[node name="ProgressBar" type="ProgressBar" parent="Top_container"]
+layout_mode = 0
+offset_right = 650.0
+offset_bottom = 27.0
+theme_override_styles/background = SubResource("StyleBoxFlat_wbe42")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xereu")
+show_percentage = false
+
+[node name="ProgressBar2" type="ProgressBar" parent="Top_container"]
+layout_mode = 0
+offset_top = 23.0
+offset_right = 650.0
+offset_bottom = 50.0
+theme_override_styles/background = SubResource("StyleBoxFlat_smbmw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_72rxi")
+show_percentage = false
+
+[node name="ProgressBar3" type="ProgressBar" parent="Top_container"]
+layout_mode = 0
+offset_top = 50.0
+offset_right = 650.0
+offset_bottom = 77.0
+theme_override_styles/background = SubResource("StyleBoxFlat_ueq58")
+theme_override_styles/fill = SubResource("StyleBoxFlat_g0jqo")
+show_percentage = false
+
+[connection signal="pressed" from="Clicker_Container/TextureButton" to="Clicker_Container" method="_on_click"]

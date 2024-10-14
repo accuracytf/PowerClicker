@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://de2me0flre225" path="res://scenes/shop.tscn" id="1_54ehq"]
 [ext_resource type="Script" path="res://scripts/date.gd" id="2_tnerf"]
+[ext_resource type="PackedScene" uid="uid://qskbgebhpfxp" path="res://scenes/background.tscn" id="4_5usdm"]
 [ext_resource type="PackedScene" uid="uid://brwbd56cm431w" path="res://scenes/clicker.tscn" id="4_r1kr1"]
-[ext_resource type="Texture2D" uid="uid://c4vkrlsb27nb5" path="res://sprites/wheel-pixilart_1.png" id="5_xar7l"]
 [ext_resource type="PackedScene" uid="uid://s8cjlmtq7l1v" path="res://scenes/top.tscn" id="6_j4t0r"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ry5bk"]
@@ -58,14 +58,11 @@ offset_bottom = 234.0
 script = ExtResource("2_tnerf")
 
 [node name="Date_Label" type="Label" parent="Left_Container/Date"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.158
-anchor_bottom = 0.158
-offset_left = 6.0
-offset_top = 93.036
+layout_mode = 0
+offset_left = 2.0
+offset_top = 25.0
 offset_right = 280.0
-offset_bottom = 239.036
+offset_bottom = 205.0
 text = "Date: 0"
 label_settings = SubResource("LabelSettings_o4yec")
 
@@ -82,11 +79,10 @@ grow_vertical = 2
 
 [node name="Clicker" parent="Clicker_Container" instance=ExtResource("4_r1kr1")]
 layout_mode = 1
-offset_left = 108.0
-offset_top = -17.0
-offset_right = -326.0
-offset_bottom = -283.0
-scale = Vector2(1.6, 1.6)
+offset_left = 149.0
+offset_top = 170.0
+offset_right = -263.0
+offset_bottom = -75.0
 
 [node name="Top_container" type="Control" parent="."]
 custom_minimum_size = Vector2(752, 150)
@@ -104,9 +100,9 @@ layout_mode = 1
 offset_right = 171.944
 offset_bottom = 49.35
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" parent="." instance=ExtResource("4_5usdm")]
 show_behind_parent = true
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-texture = ExtResource("5_xar7l")
+layout_mode = 1
+offset_right = 226.0
+offset_bottom = 141.0
+scale = Vector2(1.6, 1.6)

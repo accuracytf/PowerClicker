@@ -73,7 +73,7 @@ vertical_alignment = 1
 layout_mode = 0
 offset_left = 10.0
 offset_top = 148.0
-offset_right = 200.0
+offset_right = 190.0
 offset_bottom = 388.0
 theme = SubResource("Theme_spnmi")
 
@@ -167,7 +167,7 @@ text = "100kr"
 layout_mode = 0
 offset_left = 10.0
 offset_top = 408.0
-offset_right = 200.0
+offset_right = 190.0
 offset_bottom = 648.0
 theme = SubResource("Theme_i51tm")
 
