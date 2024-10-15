@@ -16,8 +16,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var labeltext = get_node("../../Left_Container/Money")
 	if(clicked == true): 
-		Globals.Money += 1
-		labeltext.text = "Money: " + str(Globals.Money)
+		Globals.money += 1
+		labeltext.text = "Money: " + str(Globals.money)
 		progress_bar.value +=5
 		clicked = false
 		

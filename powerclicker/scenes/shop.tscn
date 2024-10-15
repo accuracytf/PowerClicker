@@ -36,7 +36,7 @@ font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_272du"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4euqa"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7exh1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_11bn3"]
 
@@ -44,7 +44,7 @@ font_color = Color(0, 0, 0, 1)
 VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_srhg0")
 VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_tufnj")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_272du")
-VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_4euqa")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_7exh1")
 VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_11bn3")
 
 [node name="Shop" type="Control"]
@@ -166,9 +166,9 @@ text = "100kr"
 [node name="ScrollContainer_Red" type="ScrollContainer" parent="."]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 408.0
+offset_top = 398.0
 offset_right = 190.0
-offset_bottom = 648.0
+offset_bottom = 638.0
 theme = SubResource("Theme_i51tm")
 
 [node name="VBoxContainer_Red" type="VBoxContainer" parent="ScrollContainer_Red"]

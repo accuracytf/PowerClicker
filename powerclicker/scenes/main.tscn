@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1m33vb1mh7wr"]
+[gd_scene load_steps=9 format=3 uid="uid://b1m33vb1mh7wr"]
 
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_18q3u"]
 [ext_resource type="PackedScene" uid="uid://de2me0flre225" path="res://scenes/shop.tscn" id="1_54ehq"]
 [ext_resource type="Script" path="res://scripts/date.gd" id="2_tnerf"]
 [ext_resource type="PackedScene" uid="uid://brwbd56cm431w" path="res://scenes/clicker.tscn" id="4_r1kr1"]
@@ -19,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_18q3u")
 
 [node name="Right_Container" type="Control" parent="."]
 custom_minimum_size = Vector2(200, 0)
@@ -89,6 +91,7 @@ offset_bottom = -283.0
 scale = Vector2(1.6, 1.6)
 
 [node name="Top_container" type="Control" parent="."]
+z_index = -1
 custom_minimum_size = Vector2(752, 150)
 layout_mode = 1
 anchors_preset = 5
@@ -105,8 +108,12 @@ offset_right = 171.944
 offset_bottom = 49.35
 
 [node name="TextureRect" type="TextureRect" parent="."]
-show_behind_parent = true
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("5_xar7l")
