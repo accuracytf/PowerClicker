@@ -8,9 +8,9 @@ var start_year: int = 2024        # Starting year (2024)
 
 func _process(delta: float) -> void:
 	seconds_passed += delta  # Increment seconds by the time since the last frame
-	if seconds_passed >= 1:  # 5 seconds for one day
+	if seconds_passed >= 0.2:  # 5 seconds for one day
 		days_passed += 1
-		seconds_passed -= 1 # Reset seconds_passed for the next day
+		seconds_passed -= 0.2 # Reset seconds_passed for the next day
 		update_label()  # Update the label with the new date
 
 func update_label() -> void:
