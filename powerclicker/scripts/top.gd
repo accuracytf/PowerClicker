@@ -25,8 +25,8 @@ func _process(delta: float) -> void:
 	timer += delta
 	
 	# Calculate the current progress percentage
-	if timer <= duration:
-		var progress_percentage = (timer / duration) * 100
+	if progress_bar.value < 100:
+		var progress_percentage =+ Globals.kWd /10000
 		progress_bar.value = progress_percentage  # Update the ProgressBar value
 		progress_bar1.value = progress_percentage  
 		progress_bar2.value = progress_percentage  

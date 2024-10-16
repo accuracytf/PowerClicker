@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1m33vb1mh7wr"]
+[gd_scene load_steps=11 format=3 uid="uid://b1m33vb1mh7wr"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_18q3u"]
 [ext_resource type="PackedScene" uid="uid://de2me0flre225" path="res://scenes/shop.tscn" id="1_54ehq"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://brwbd56cm431w" path="res://scenes/clicker.tscn" id="4_r1kr1"]
 [ext_resource type="Texture2D" uid="uid://c4vkrlsb27nb5" path="res://sprites/wheel-pixilart_1.png" id="5_xar7l"]
 [ext_resource type="PackedScene" uid="uid://s8cjlmtq7l1v" path="res://scenes/top.tscn" id="6_j4t0r"]
+[ext_resource type="PackedScene" uid="uid://cy4j61m8b3j66" path="res://scenes/side-box.tscn" id="7_2v1u2"]
+[ext_resource type="PackedScene" uid="uid://cp6ctctsi8u1d" path="res://scenes/goals.tscn" id="8_8f3xx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ry5bk"]
 font_size = 40
@@ -119,3 +121,32 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("5_xar7l")
+
+[node name="Sidebox" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 15.0
+offset_top = 500.0
+offset_right = 280.0
+offset_bottom = 635.0
+
+[node name="Side-box" parent="Sidebox" instance=ExtResource("7_2v1u2")]
+layout_mode = 1
+offset_left = -2.0
+offset_top = -142.0
+offset_right = -27.0
+offset_bottom = -138.0
+
+[node name="Goals" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 17.0
+offset_top = 272.0
+offset_right = 282.0
+offset_bottom = 407.0
+
+[node name="Side-box" parent="Goals" instance=ExtResource("8_8f3xx")]
+layout_mode = 1
+offset_left = 4.0
+offset_top = -32.0
+offset_right = -53.0
+offset_bottom = -53.0
