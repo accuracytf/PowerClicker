@@ -37,7 +37,7 @@ func _ready() -> void:
 	_initShopitem(buildings[2], "Hydroelectric", 1000, 89000, 0.75, 1.5, $ScrollContainer_Green/VBoxContainer_Green/Hydroelectric)
 	_initShopitem(buildings[3], "Coal Powerplant", 100, 12000000, 13000000, 1.5, $ScrollContainer_Red/VBoxContainer_Red/TextureRect_Coal)
 	_initShopitem(buildings[4], "Gas Powerplant", 100, 11520000, 5184000, 1.5, $ScrollContainer_Red/VBoxContainer_Red/TextureRect_Gas)
-	_initShopitem(buildings[5], "Gas Powerplant", 100, 7200000, 5760000, 1.5, $ScrollContainer_Red/VBoxContainer_Red/TextureRect_Oil)
+	_initShopitem(buildings[5], "Oil Powerplant", 100, 7200000, 5760000, 1.5, $ScrollContainer_Red/VBoxContainer_Red/TextureRect_Oil)
 	
 	for building in buildings:
 		_updateLabel(building)
