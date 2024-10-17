@@ -1,0 +1,155 @@
+[gd_scene load_steps=12 format=3 uid="uid://b1m33vb1mh7wr"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_18q3u"]
+[ext_resource type="PackedScene" uid="uid://de2me0flre225" path="res://scenes/shop.tscn" id="1_54ehq"]
+[ext_resource type="Script" path="res://scripts/date.gd" id="2_tnerf"]
+[ext_resource type="PackedScene" uid="uid://brwbd56cm431w" path="res://scenes/clicker.tscn" id="4_r1kr1"]
+[ext_resource type="FontFile" uid="uid://0kvgwnqhrp81" path="res://fonts/m5x7.ttf" id="4_wx3q3"]
+[ext_resource type="Texture2D" uid="uid://c4vkrlsb27nb5" path="res://sprites/wheel-pixilart_1.png" id="5_xar7l"]
+[ext_resource type="PackedScene" uid="uid://s8cjlmtq7l1v" path="res://scenes/top.tscn" id="6_j4t0r"]
+[ext_resource type="PackedScene" uid="uid://cy4j61m8b3j66" path="res://scenes/side-box.tscn" id="7_2v1u2"]
+[ext_resource type="PackedScene" uid="uid://cp6ctctsi8u1d" path="res://scenes/goals.tscn" id="8_8f3xx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ry5bk"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_o4yec"]
+font_size = 40
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_18q3u")
+
+[node name="Right_Container" type="Control" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Shop" parent="Right_Container" instance=ExtResource("1_54ehq")]
+layout_mode = 1
+offset_right = 0.0
+
+[node name="Left_Container" type="Control" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="Money" type="Label" parent="Left_Container"]
+layout_mode = 0
+offset_right = 291.0
+offset_bottom = 121.0
+theme_override_fonts/font = ExtResource("4_wx3q3")
+text = "Money: 0"
+label_settings = SubResource("LabelSettings_ry5bk")
+autowrap_mode = 1
+
+[node name="Date" type="Control" parent="Left_Container"]
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 76.0
+offset_right = 308.0
+offset_bottom = 234.0
+script = ExtResource("2_tnerf")
+
+[node name="Date_Label" type="Label" parent="Left_Container/Date"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.158
+anchor_bottom = 0.158
+offset_left = 6.0
+offset_top = 93.036
+offset_right = 280.0
+offset_bottom = 239.036
+theme_override_fonts/font = ExtResource("4_wx3q3")
+text = "Date: 0"
+label_settings = SubResource("LabelSettings_o4yec")
+
+[node name="Clicker_Container" type="Control" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 230.0
+offset_top = 142.0
+offset_right = 940.0
+offset_bottom = 1.0
+grow_vertical = 2
+
+[node name="Clicker" parent="Clicker_Container" instance=ExtResource("4_r1kr1")]
+layout_mode = 1
+offset_left = 108.0
+offset_top = -17.0
+offset_right = -326.0
+offset_bottom = -283.0
+scale = Vector2(1.6, 1.6)
+
+[node name="Top_container" type="Control" parent="."]
+z_index = -1
+custom_minimum_size = Vector2(752, 150)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -376.0
+offset_right = 376.0
+offset_bottom = 150.0
+grow_horizontal = 2
+
+[node name="Control" parent="Top_container" instance=ExtResource("6_j4t0r")]
+z_index = 1
+layout_mode = 1
+offset_left = 50.0
+offset_right = 221.944
+offset_bottom = 49.35
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_xar7l")
+
+[node name="Sidebox" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 15.0
+offset_top = 500.0
+offset_right = 280.0
+offset_bottom = 635.0
+
+[node name="Side-box" parent="Sidebox" instance=ExtResource("7_2v1u2")]
+layout_mode = 1
+offset_left = -2.0
+offset_top = -142.0
+offset_right = -27.0
+offset_bottom = -138.0
+
+[node name="Goals" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 17.0
+offset_top = 272.0
+offset_right = 282.0
+offset_bottom = 407.0
+
+[node name="Side-box" parent="Goals" instance=ExtResource("8_8f3xx")]
+layout_mode = 1
+offset_left = 4.0
+offset_top = -32.0
+offset_right = -53.0
+offset_bottom = -53.0
