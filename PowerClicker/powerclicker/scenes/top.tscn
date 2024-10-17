@@ -1,60 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://s8cjlmtq7l1v"]
+[gd_scene load_steps=2 format=3 uid="uid://s8cjlmtq7l1v"]
 
 [ext_resource type="Script" path="res://scripts/top.gd" id="1_7ht4k"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g38em"]
-bg_color = Color(0.581996, 0.583216, 0.741006, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y24oa"]
-bg_color = Color(0, 0.631376, 0.973327, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4g1xd"]
-bg_color = Color(0.421764, 0.658606, 0.563335, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qoxek"]
-bg_color = Color(0, 0.719873, 0.336086, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vurle"]
-bg_color = Color(0.89867, 0.447305, 0.382597, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j8b3f"]
-bg_color = Color(1, 0.333582, 0.350426, 1)
-
-[node name="ProgressBars" type="Control"]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchor_right = 0.653
 anchor_bottom = 0.231
-offset_right = -0.256042
+offset_right = -592.256
 offset_bottom = 0.311996
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7ht4k")
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = -3.05176e-05
-offset_right = 650.0
-offset_bottom = 27.0
-theme_override_styles/background = SubResource("StyleBoxFlat_g38em")
-theme_override_styles/fill = SubResource("StyleBoxFlat_y24oa")
-show_percentage = false
-
-[node name="ProgressBar2" type="ProgressBar" parent="."]
-layout_mode = 0
-offset_left = -3.05176e-05
-offset_top = 23.0
-offset_right = 650.0
-offset_bottom = 50.0
-theme_override_styles/background = SubResource("StyleBoxFlat_4g1xd")
-theme_override_styles/fill = SubResource("StyleBoxFlat_qoxek")
-show_percentage = false
-
-[node name="ProgressBar3" type="ProgressBar" parent="."]
-layout_mode = 0
-offset_left = -3.05176e-05
-offset_top = 50.0
-offset_right = 650.0
-offset_bottom = 77.0
-theme_override_styles/background = SubResource("StyleBoxFlat_vurle")
-theme_override_styles/fill = SubResource("StyleBoxFlat_j8b3f")
-show_percentage = false
+offset_right = 324.0
+offset_bottom = 122.0

@@ -96,23 +96,21 @@ offset_bottom = -283.0
 scale = Vector2(1.6, 1.6)
 
 [node name="Top_container" type="Control" parent="."]
-z_index = -1
+z_index = 1
 custom_minimum_size = Vector2(752, 150)
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -376.0
-offset_right = 376.0
-offset_bottom = 150.0
-grow_horizontal = 2
+anchors_preset = 0
+offset_left = 209.0
+offset_top = -1.0
+offset_right = 961.0
+offset_bottom = 149.0
 
 [node name="Control" parent="Top_container" instance=ExtResource("6_j4t0r")]
-z_index = 1
 layout_mode = 1
-offset_left = 50.0
-offset_right = 221.944
-offset_bottom = 49.35
+offset_left = 237.0
+offset_top = 40.0
+offset_right = 2.94397
+offset_bottom = 40.35
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -1
