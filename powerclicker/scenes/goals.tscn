@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cp6ctctsi8u1d"]
+[gd_scene load_steps=3 format=3 uid="uid://cp6ctctsi8u1d"]
 
 [ext_resource type="Script" path="res://scripts/goals.gd" id="1_c5tkg"]
+[ext_resource type="FontFile" uid="uid://0kvgwnqhrp81" path="res://fonts/m5x7.ttf" id="2_vrixx"]
 
 [node name="Side-box" type="Control"]
 layout_mode = 3
@@ -59,4 +60,5 @@ autowrap_mode = 2
 layout_mode = 0
 offset_right = 238.0
 offset_bottom = 107.0
+theme_override_fonts/font = ExtResource("2_vrixx")
 autowrap_mode = 2

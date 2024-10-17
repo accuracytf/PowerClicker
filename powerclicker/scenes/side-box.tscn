@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cy4j61m8b3j66"]
+[gd_scene load_steps=3 format=3 uid="uid://cy4j61m8b3j66"]
 
 [ext_resource type="Script" path="res://scripts/side_box.gd" id="1_c2iqg"]
+[ext_resource type="FontFile" uid="uid://0kvgwnqhrp81" path="res://fonts/m5x7.ttf" id="2_duvuu"]
 
 [node name="Side-box" type="Control"]
 layout_mode = 3
@@ -21,23 +22,28 @@ offset_bottom = 331.0
 [node name="Label0" type="Label" parent="VBoxContainer"]
 custom_minimum_size = Vector2(50, 10)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_duvuu")
+theme_override_font_sizes/font_size = 16
 text = "Att ladda en smartphone fullständigt från 0 till 100 % drar ungefär 5–10 wattimmar (Wh), beroende på batterikapaciteten. Det motsvarar ungefär lika mycket energi som en glödlampa på 10 watt använder på en timme."
 autowrap_mode = 2
 
 [node name="Label1" type="Label" parent="VBoxContainer"]
 custom_minimum_size = Vector2(50, 10)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_duvuu")
 text = "Att ladda en elbil som t.ex. Tesla Model 3 från tomt till fullt batteri kan kräva cirka 50–75 kWh, vilket motsvarar ungefär vad ett genomsnittligt hushåll i Sverige använder på två till tre dagar."
 autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 custom_minimum_size = Vector2(50, 10)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_duvuu")
 text = "En torktumlares energiförbrukning varierar men kan dra 2–5 kWh per användning, vilket gör den till en av de större energikonsumenterna i hushållet."
 autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="VBoxContainer"]
 custom_minimum_size = Vector2(50, 10)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_duvuu")
 text = "En stationär dator använder vanligtvis mellan 100 och 300 watt. Om du arbetar vid din dator i åtta timmar kan det kosta dig mellan 0,8 och 2,4 kWh."
 autowrap_mode = 2

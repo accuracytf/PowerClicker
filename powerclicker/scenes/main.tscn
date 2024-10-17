@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://b1m33vb1mh7wr"]
+[gd_scene load_steps=12 format=3 uid="uid://b1m33vb1mh7wr"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_18q3u"]
 [ext_resource type="PackedScene" uid="uid://de2me0flre225" path="res://scenes/shop.tscn" id="1_54ehq"]
 [ext_resource type="Script" path="res://scripts/date.gd" id="2_tnerf"]
 [ext_resource type="PackedScene" uid="uid://brwbd56cm431w" path="res://scenes/clicker.tscn" id="4_r1kr1"]
+[ext_resource type="FontFile" uid="uid://0kvgwnqhrp81" path="res://fonts/m5x7.ttf" id="4_wx3q3"]
 [ext_resource type="Texture2D" uid="uid://c4vkrlsb27nb5" path="res://sprites/wheel-pixilart_1.png" id="5_xar7l"]
 [ext_resource type="PackedScene" uid="uid://s8cjlmtq7l1v" path="res://scenes/top.tscn" id="6_j4t0r"]
 [ext_resource type="PackedScene" uid="uid://cy4j61m8b3j66" path="res://scenes/side-box.tscn" id="7_2v1u2"]
@@ -49,6 +50,7 @@ grow_vertical = 2
 layout_mode = 0
 offset_right = 291.0
 offset_bottom = 121.0
+theme_override_fonts/font = ExtResource("4_wx3q3")
 text = "Money: 0"
 label_settings = SubResource("LabelSettings_ry5bk")
 autowrap_mode = 1
@@ -70,6 +72,7 @@ offset_left = 6.0
 offset_top = 93.036
 offset_right = 280.0
 offset_bottom = 239.036
+theme_override_fonts/font = ExtResource("4_wx3q3")
 text = "Date: 0"
 label_settings = SubResource("LabelSettings_o4yec")
 
