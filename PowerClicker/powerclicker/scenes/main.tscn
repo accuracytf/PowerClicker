@@ -71,10 +71,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.158
 anchor_bottom = 0.158
-offset_left = 6.0
-offset_top = 93.036
-offset_right = 280.0
-offset_bottom = 239.036
+offset_left = 17.0
+offset_top = 92.036
+offset_right = 291.0
+offset_bottom = 238.036
 theme_override_fonts/font = ExtResource("4_wx3q3")
 text = "Date: 0"
 label_settings = SubResource("LabelSettings_o4yec")
@@ -113,13 +113,13 @@ offset_bottom = 149.0
 
 [node name="Control" parent="Top_container" instance=ExtResource("6_j4t0r")]
 layout_mode = 1
-offset_left = 237.0
-offset_top = 40.0
-offset_right = 2.94397
-offset_bottom = 40.35
+offset_left = 58.0
+offset_top = 14.0
+offset_right = 79.896
+offset_bottom = 58.6
 
 [node name="TextureRect" type="TextureRect" parent="."]
-z_index = -1
+z_index = -5
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -153,7 +153,7 @@ offset_bottom = 407.0
 
 [node name="Side-box" parent="Goals" instance=ExtResource("8_8f3xx")]
 layout_mode = 1
-offset_left = 4.0
-offset_top = -32.0
-offset_right = -53.0
-offset_bottom = -53.0
+offset_left = -3.0
+offset_top = -50.0
+offset_right = -36.0
+offset_bottom = 113.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://de2me0flre225"]
+[gd_scene load_steps=24 format=3 uid="uid://de2me0flre225"]
 
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_fi3cu"]
 [ext_resource type="Texture2D" uid="uid://dp2ugeapl7710" path="res://sprites/solar.png" id="2_lcpw3"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://bb1jq8rr06clk" path="res://sprites/hydro-power.png" id="3_gpyaw"]
 [ext_resource type="Texture2D" uid="uid://df1pyxqf8euvn" path="res://sprites/windturbine.png" id="3_ooq4s"]
 [ext_resource type="Texture2D" uid="uid://bck0goejrc26e" path="res://sprites/coal_power.png" id="5_4s3d7"]
+[ext_resource type="AudioStream" uid="uid://tfmwghrwbavi" path="res://sound/cash-register-purchase-87313.mp3" id="8_uh26e"]
+[ext_resource type="AudioStream" uid="uid://b7dyoerw1gfy2" path="res://sound/error-126627.mp3" id="9_ltyuj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_afl11"]
 font_size = 48
@@ -261,3 +263,9 @@ offset_bottom = 9.0
 grow_horizontal = 0
 grow_vertical = 2
 text = "100kr"
+
+[node name="SuccessSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_uh26e")
+
+[node name="ErrorSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_ltyuj")

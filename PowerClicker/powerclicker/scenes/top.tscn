@@ -1,13 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://s8cjlmtq7l1v"]
+[gd_scene load_steps=3 format=3 uid="uid://s8cjlmtq7l1v"]
 
 [ext_resource type="Script" path="res://scripts/top.gd" id="1_7ht4k"]
+[ext_resource type="FontFile" uid="uid://0kvgwnqhrp81" path="res://fonts/m5x7.ttf" id="2_xp8xh"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchor_right = 0.653
-anchor_bottom = 0.231
-offset_right = -592.256
-offset_bottom = 0.311996
+anchor_right = 0.427
+anchor_bottom = 0.216
+offset_right = 7.09598
+offset_bottom = 10.032
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7ht4k")
@@ -16,3 +17,5 @@ script = ExtResource("1_7ht4k")
 layout_mode = 0
 offset_right = 324.0
 offset_bottom = 122.0
+theme_override_fonts/font = ExtResource("2_xp8xh")
+theme_override_font_sizes/font_size = 30

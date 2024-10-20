@@ -49,10 +49,16 @@ func _process(delta: float) -> void:
 	pass
 
 func _which_button_pressed(building: shopItem):
+	
 	if (Globals.money >= building.price):
+		var sound = get_node("SuccessSound")
+		sound.play()
 		Globals.money -= building.price
 		Globals.kWd += building.output
 		Globals.CO2PerYear += building.CO2_output
 		building.price *= building.priceScale
 		building.amount += 1
 		_updateLabel(building)
+	else:
+		var sound = get_node("ErrorSound")
+		sound.play()
