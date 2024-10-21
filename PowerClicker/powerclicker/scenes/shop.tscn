@@ -1,17 +1,15 @@
 [gd_scene load_steps=24 format=3 uid="uid://de2me0flre225"]
 
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_fi3cu"]
+[ext_resource type="Texture2D" uid="uid://bysm55af4fytu" path="res://sprites/shop.png" id="2_g3k05"]
 [ext_resource type="Texture2D" uid="uid://dp2ugeapl7710" path="res://sprites/solar.png" id="2_lcpw3"]
-[ext_resource type="FontFile" uid="uid://0kvgwnqhrp81" path="res://fonts/m5x7.ttf" id="2_ufef2"]
-[ext_resource type="Texture2D" uid="uid://c15e6oya5mwqc" path="res://sprites/red.png" id="2_wxvjw"]
 [ext_resource type="Texture2D" uid="uid://bb1jq8rr06clk" path="res://sprites/hydro-power.png" id="3_gpyaw"]
 [ext_resource type="Texture2D" uid="uid://df1pyxqf8euvn" path="res://sprites/windturbine.png" id="3_ooq4s"]
 [ext_resource type="Texture2D" uid="uid://bck0goejrc26e" path="res://sprites/coal_power.png" id="5_4s3d7"]
+[ext_resource type="Texture2D" uid="uid://c0hdr7flyhdtw" path="res://sprites/gas_power.png" id="7_i7k7g"]
 [ext_resource type="AudioStream" uid="uid://tfmwghrwbavi" path="res://sound/cash-register-purchase-87313.mp3" id="8_uh26e"]
+[ext_resource type="Texture2D" uid="uid://cdeinnrh1wqib" path="res://sprites/oil_power.png" id="8_xjrjd"]
 [ext_resource type="AudioStream" uid="uid://b7dyoerw1gfy2" path="res://sound/error-126627.mp3" id="9_ltyuj"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_afl11"]
-font_size = 48
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3jcr"]
 
@@ -60,25 +58,21 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fi3cu")
 
-[node name="Title" type="Label" parent="."]
-custom_minimum_size = Vector2(0, 100)
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
-offset_bottom = 148.0
+anchor_bottom = 1.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_ufef2")
-text = "Shop"
-label_settings = SubResource("LabelSettings_afl11")
-horizontal_alignment = 1
-vertical_alignment = 1
+grow_vertical = 2
+texture = ExtResource("2_g3k05")
 
 [node name="ScrollContainer_Green" type="ScrollContainer" parent="."]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 148.0
-offset_right = 190.0
-offset_bottom = 388.0
+offset_top = 106.0
+offset_right = 191.0
+offset_bottom = 358.0
 theme = SubResource("Theme_spnmi")
 
 [node name="VBoxContainer_Green" type="VBoxContainer" parent="ScrollContainer_Green"]
@@ -106,12 +100,28 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -60.0
-offset_top = -9.0
+offset_top = -29.0
 offset_right = -8.0
-offset_bottom = 9.0
+offset_bottom = 2.0
 grow_horizontal = 0
 grow_vertical = 2
 text = "100kr"
+
+[node name="Button2" type="Button" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Solar"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = 10.0
+offset_right = -8.0
+offset_bottom = 41.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Sell
+"
 
 [node name="TextureRect_Wind" type="TextureRect" parent="ScrollContainer_Green/VBoxContainer_Green"]
 layout_mode = 2
@@ -133,12 +143,28 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -60.0
-offset_top = -9.0
+offset_top = -29.0
 offset_right = -8.0
-offset_bottom = 9.0
+offset_bottom = 2.0
 grow_horizontal = 0
 grow_vertical = 2
 text = "100kr"
+
+[node name="Button2" type="Button" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Wind"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = 10.0
+offset_right = -8.0
+offset_bottom = 41.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Sell
+"
 
 [node name="Hydroelectric" type="TextureRect" parent="ScrollContainer_Green/VBoxContainer_Green"]
 layout_mode = 2
@@ -160,19 +186,35 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -60.0
-offset_top = -9.0
+offset_top = -29.0
 offset_right = -8.0
-offset_bottom = 9.0
+offset_bottom = 2.0
 grow_horizontal = 0
 grow_vertical = 2
 text = "100kr"
 
+[node name="Button2" type="Button" parent="ScrollContainer_Green/VBoxContainer_Green/Hydroelectric"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = 10.0
+offset_right = -8.0
+offset_bottom = 41.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Sell
+"
+
 [node name="ScrollContainer_Red" type="ScrollContainer" parent="."]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 398.0
+offset_top = 378.0
 offset_right = 190.0
-offset_bottom = 638.0
+offset_bottom = 634.0
 theme = SubResource("Theme_i51tm")
 
 [node name="VBoxContainer_Red" type="VBoxContainer" parent="ScrollContainer_Red"]
@@ -201,16 +243,32 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -60.0
-offset_top = -9.0
+offset_top = -29.0
 offset_right = -8.0
-offset_bottom = 9.0
+offset_bottom = 2.0
 grow_horizontal = 0
 grow_vertical = 2
 text = "100kr"
 
+[node name="Button2" type="Button" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Coal"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = 10.0
+offset_right = -8.0
+offset_bottom = 41.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Sell
+"
+
 [node name="TextureRect_Gas" type="TextureRect" parent="ScrollContainer_Red/VBoxContainer_Red"]
 layout_mode = 2
-texture = ExtResource("2_wxvjw")
+texture = ExtResource("7_i7k7g")
 
 [node name="Label" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Gas"]
 layout_mode = 1
@@ -229,16 +287,32 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -60.0
-offset_top = -9.0
+offset_top = -29.0
 offset_right = -8.0
-offset_bottom = 9.0
+offset_bottom = 2.0
 grow_horizontal = 0
 grow_vertical = 2
 text = "100kr"
 
+[node name="Button2" type="Button" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Gas"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = 10.0
+offset_right = -8.0
+offset_bottom = 41.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Sell
+"
+
 [node name="TextureRect_Oil" type="TextureRect" parent="ScrollContainer_Red/VBoxContainer_Red"]
 layout_mode = 2
-texture = ExtResource("2_wxvjw")
+texture = ExtResource("8_xjrjd")
 
 [node name="Label" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Oil"]
 layout_mode = 1
@@ -257,12 +331,28 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -60.0
-offset_top = -9.0
+offset_top = -29.0
 offset_right = -8.0
-offset_bottom = 9.0
+offset_bottom = 2.0
 grow_horizontal = 0
 grow_vertical = 2
 text = "100kr"
+
+[node name="Button2" type="Button" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Oil"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = 10.0
+offset_right = -8.0
+offset_bottom = 41.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Sell
+"
 
 [node name="SuccessSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_uh26e")

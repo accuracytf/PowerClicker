@@ -41,14 +41,11 @@ func _ready() -> void:
 	
 	for building in buildings:
 		_updateLabel(building)
-		building.container.get_node("Button").connect("pressed", Callable(self, "_which_button_pressed").bind(building))
+		building.container.get_node("Button").connect("pressed", Callable(self, "_buy_button_pressed").bind(building))
+		building.container.get_node("Button2").connect("pressed", Callable(self, "_sell_button_pressed").bind(building))
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-func _which_button_pressed(building: shopItem):
+func _buy_button_pressed(building: shopItem):
 	
 	if (Globals.money >= building.price):
 		var sound = get_node("SuccessSound")
@@ -62,3 +59,17 @@ func _which_button_pressed(building: shopItem):
 	else:
 		var sound = get_node("ErrorSound")
 		sound.play()
+
+func _sell_button_pressed(building: shopItem):
+	
+	if (building.amount > 0):
+		var sound = get_node("SuccessSound") ## Behöver nytt ljud för att sälja något
+		sound.play()
+		Globals.kWd -= building.output
+		Globals.CO2PerYear -= building.CO2_output
+		building.amount -= 1
+		_updateLabel(building)
+	else:
+		var sound = get_node("ErrorSound")
+		sound.play()
+	
