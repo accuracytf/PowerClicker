@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cckyeotm3qohq"
-path="res://.godot/imported/frame_7_delay-0.08s.png-428419b96ba29f956c7e26c4a0dba004.ctex"
+uid="uid://2leqwrvi0usq"
+path="res://.godot/imported/pixil-frame-1.png-ef635255bab079a73ad59792662e172a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/hamster_gif/frame_7_delay-0.08s.png"
-dest_files=["res://.godot/imported/frame_7_delay-0.08s.png-428419b96ba29f956c7e26c4a0dba004.ctex"]
+source_file="res://sprites/hamster_gif/pixil-frame-1.png"
+dest_files=["res://.godot/imported/pixil-frame-1.png-ef635255bab079a73ad59792662e172a.ctex"]
 
 [params]
 

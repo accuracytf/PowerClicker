@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b1m33vb1mh7wr"]
+[gd_scene load_steps=23 format=3 uid="uid://b1m33vb1mh7wr"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_18q3u"]
 [ext_resource type="PackedScene" uid="uid://de2me0flre225" path="res://scenes/shop.tscn" id="1_54ehq"]
@@ -10,12 +10,56 @@
 [ext_resource type="PackedScene" uid="uid://s8cjlmtq7l1v" path="res://scenes/top.tscn" id="6_j4t0r"]
 [ext_resource type="PackedScene" uid="uid://cy4j61m8b3j66" path="res://scenes/side-box.tscn" id="7_2v1u2"]
 [ext_resource type="PackedScene" uid="uid://cp6ctctsi8u1d" path="res://scenes/goals.tscn" id="8_8f3xx"]
+[ext_resource type="Texture2D" uid="uid://bg6ft6fniwlfs" path="res://sprites/hamster_gif/pixil-frame-0.png" id="8_oylyu"]
+[ext_resource type="Texture2D" uid="uid://2leqwrvi0usq" path="res://sprites/hamster_gif/pixil-frame-1.png" id="9_aa4lu"]
+[ext_resource type="Texture2D" uid="uid://dky0yf2mvkbjc" path="res://sprites/hamster_gif/pixil-frame-2.png" id="10_1brfi"]
+[ext_resource type="Texture2D" uid="uid://dljbranwick64" path="res://sprites/hamster_gif/pixil-frame-3.png" id="11_yopry"]
+[ext_resource type="Texture2D" uid="uid://dyewp3h6n3ntj" path="res://sprites/hamster_gif/pixil-frame-4.png" id="12_dtdgy"]
+[ext_resource type="Texture2D" uid="uid://b6f73exi0u20f" path="res://sprites/hamster_gif/pixil-frame-5.png" id="13_b2bsg"]
+[ext_resource type="Texture2D" uid="uid://cxoqull6c231w" path="res://sprites/hamster_gif/pixil-frame-6.png" id="14_kfdcv"]
+[ext_resource type="Texture2D" uid="uid://617rc2ou0i7w" path="res://sprites/hamster_gif/pixil-frame-7.png" id="15_jo7qb"]
+[ext_resource type="Texture2D" uid="uid://d4brjl3e0fkdb" path="res://sprites/hamster_gif/pixil-frame-8.png" id="16_2iad8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ry5bk"]
 font_size = 40
 
 [sub_resource type="LabelSettings" id="LabelSettings_o4yec"]
 font_size = 40
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5akra"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_oylyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_aa4lu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1brfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_yopry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dtdgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_b2bsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_kfdcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jo7qb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2iad8")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -25,6 +69,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_18q3u")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_xar7l")
 
 [node name="Right_Container" type="Control" parent="."]
 custom_minimum_size = Vector2(200, 0)
@@ -92,14 +147,21 @@ grow_vertical = 2
 
 [node name="Clicker" parent="Clicker_Container" instance=ExtResource("4_r1kr1")]
 layout_mode = 1
-offset_left = 108.0
-offset_top = -17.0
-offset_right = -326.0
-offset_bottom = -283.0
+offset_left = 196.0
+offset_top = 54.0
+offset_right = -238.0
+offset_bottom = -212.0
 scale = Vector2(1.6, 1.6)
+pivot_offset = Vector2(148.75, 118.75)
 
 [node name="ClickSound" type="AudioStreamPlayer" parent="Clicker_Container/Clicker"]
 stream = ExtResource("6_2gk4l")
+
+[node name="Hamter_animation" type="AnimatedSprite2D" parent="Clicker_Container"]
+position = Vector2(353, 441)
+scale = Vector2(3.845, 3.55)
+sprite_frames = SubResource("SpriteFrames_5akra")
+animation = &"run"
 
 [node name="Top_container" type="Control" parent="."]
 z_index = 1
@@ -117,17 +179,6 @@ offset_left = 58.0
 offset_top = 14.0
 offset_right = 79.896
 offset_bottom = 58.6
-
-[node name="TextureRect" type="TextureRect" parent="."]
-z_index = -5
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = ExtResource("5_xar7l")
 
 [node name="Sidebox" type="Control" parent="."]
 anchors_preset = 0
