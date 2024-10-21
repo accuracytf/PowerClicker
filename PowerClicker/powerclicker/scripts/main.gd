@@ -15,4 +15,4 @@ func _process(delta: float) -> void:
 
 func _update_money():
 	Globals.money += Globals.kWd / 10
-	get_node("Left_Container/Money").text = "Money: " + str(Globals.money)
+	get_node("Left_Container/Money").text = "Money: " + str(floor(Globals.money))

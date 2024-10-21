@@ -25,7 +25,6 @@ func _process(delta: float) -> void:
 		wheel_rotation += clicks
 		if wheel_rotation > 36:
 			wheel_rotation -= 36
-		print(wheel_rotation)
 		wheel.set_rotation_degrees(wheel_rotation*10)
 		
 		

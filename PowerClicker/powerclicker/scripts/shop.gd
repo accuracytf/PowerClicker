@@ -2,7 +2,7 @@ extends Control
 
 class shopItem:
 	var name: String
-	var price: int
+	var price: float
 	var amount = 0
 	var output: float
 	var CO2_output: float
@@ -27,7 +27,7 @@ func _initShopitem(item: shopItem, name: String, price: int, output: float, CO2_
 
 func _updateLabel(item: shopItem):
 	item.container.get_node("Label").text = item.name + " " + str(item.amount)
-	item.container.get_node("Button").text = str(item.price) + " kr"
+	item.container.get_node("Button").text = str(ceil(item.price)) + " kr"
 
 
 func _ready() -> void:
