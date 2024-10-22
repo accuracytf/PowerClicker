@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b1m33vb1mh7wr"]
+[gd_scene load_steps=22 format=3 uid="uid://b1m33vb1mh7wr"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_18q3u"]
 [ext_resource type="PackedScene" uid="uid://de2me0flre225" path="res://scenes/shop.tscn" id="1_54ehq"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://c4vkrlsb27nb5" path="res://sprites/wheel-pixilart_1.png" id="5_xar7l"]
 [ext_resource type="AudioStream" uid="uid://cw5yjnufihiyk" path="res://sound/mouse-clicks-6849 (mp3cut.net).mp3" id="6_2gk4l"]
 [ext_resource type="PackedScene" uid="uid://s8cjlmtq7l1v" path="res://scenes/top.tscn" id="6_j4t0r"]
-[ext_resource type="PackedScene" uid="uid://cy4j61m8b3j66" path="res://scenes/side-box.tscn" id="7_2v1u2"]
 [ext_resource type="PackedScene" uid="uid://cp6ctctsi8u1d" path="res://scenes/goals.tscn" id="8_8f3xx"]
 [ext_resource type="Texture2D" uid="uid://bg6ft6fniwlfs" path="res://sprites/hamster_gif/pixil-frame-0.png" id="8_oylyu"]
 [ext_resource type="Texture2D" uid="uid://2leqwrvi0usq" path="res://sprites/hamster_gif/pixil-frame-1.png" id="9_aa4lu"]
@@ -145,6 +144,13 @@ offset_right = 940.0
 offset_bottom = 1.0
 grow_vertical = 2
 
+[node name="Hamter_animation" type="AnimatedSprite2D" parent="Clicker_Container"]
+z_index = 2
+position = Vector2(353, 441)
+scale = Vector2(3.845, 3.55)
+sprite_frames = SubResource("SpriteFrames_5akra")
+animation = &"run"
+
 [node name="Clicker" parent="Clicker_Container" instance=ExtResource("4_r1kr1")]
 layout_mode = 1
 offset_left = 196.0
@@ -156,12 +162,6 @@ pivot_offset = Vector2(148.75, 118.75)
 
 [node name="ClickSound" type="AudioStreamPlayer" parent="Clicker_Container/Clicker"]
 stream = ExtResource("6_2gk4l")
-
-[node name="Hamter_animation" type="AnimatedSprite2D" parent="Clicker_Container"]
-position = Vector2(353, 441)
-scale = Vector2(3.845, 3.55)
-sprite_frames = SubResource("SpriteFrames_5akra")
-animation = &"run"
 
 [node name="Top_container" type="Control" parent="."]
 z_index = 1
@@ -179,20 +179,6 @@ offset_left = 58.0
 offset_top = 14.0
 offset_right = 79.896
 offset_bottom = 58.6
-
-[node name="Sidebox" type="Control" parent="."]
-anchors_preset = 0
-offset_left = 15.0
-offset_top = 500.0
-offset_right = 280.0
-offset_bottom = 635.0
-
-[node name="Side-box" parent="Sidebox" instance=ExtResource("7_2v1u2")]
-layout_mode = 1
-offset_left = -2.0
-offset_top = -142.0
-offset_right = -27.0
-offset_bottom = -138.0
 
 [node name="Goals" type="Control" parent="."]
 layout_mode = 3
