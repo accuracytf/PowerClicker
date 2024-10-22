@@ -1,3 +1,3 @@
 extends Node
 
-var solarPrice:int = 10
+var solarPrice:int = 15
