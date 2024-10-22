@@ -175,6 +175,7 @@ text = "Sell
 "
 
 [node name="Label_Power" type="Label" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Wind"]
+layout_mode = 0
 offset_left = 9.0
 offset_top = 66.0
 offset_right = 62.0
@@ -225,6 +226,7 @@ text = "Sell
 "
 
 [node name="Label_Power" type="Label" parent="ScrollContainer_Green/VBoxContainer_Green/Hydroelectric"]
+layout_mode = 0
 offset_left = 9.0
 offset_top = 66.0
 offset_right = 62.0
@@ -289,6 +291,7 @@ text = "Sell
 "
 
 [node name="Label_Power" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Coal"]
+layout_mode = 0
 offset_left = 9.0
 offset_top = 66.0
 offset_right = 62.0
@@ -348,6 +351,7 @@ text = "Sell
 "
 
 [node name="Label_Power" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Gas"]
+layout_mode = 0
 offset_left = 9.0
 offset_top = 66.0
 offset_right = 62.0
@@ -355,6 +359,7 @@ offset_bottom = 89.0
 text = "11.5GWd"
 
 [node name="Label_Coal" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Gas"]
+layout_mode = 0
 offset_left = 9.0
 offset_top = 40.0
 offset_right = 101.0
@@ -406,6 +411,7 @@ text = "Sell
 "
 
 [node name="Label_Power" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Oil"]
+layout_mode = 0
 offset_left = 9.0
 offset_top = 66.0
 offset_right = 62.0
@@ -413,6 +419,7 @@ offset_bottom = 89.0
 text = "7.2GWd"
 
 [node name="Label_Coal" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Oil"]
+layout_mode = 0
 offset_left = 9.0
 offset_top = 40.0
 offset_right = 101.0

@@ -1,5 +1,7 @@
 extends Control
 
+var startMoney : float = 0  ## Ska vara 0 när spelet är klart, kan användas för testning
+
 var solarPrice : float = 10
 var solarScale : float = 1.01  # Priset för nästa byggnad är priest *= scale
 

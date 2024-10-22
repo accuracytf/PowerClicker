@@ -27,7 +27,7 @@ func _initShopitem(item: shopItem, name: String, price: int, output: float, CO2_
 
 func _updateLabel(item: shopItem):
 	item.container.get_node("Label").text = item.name + " " + str(item.amount)
-	item.container.get_node("Button").text = str(ceil(item.price)) + " kr"
+	item.container.get_node("Button").text = Globals.suffix(ceil(item.price)) + "kr"
 
 
 func _ready() -> void:
