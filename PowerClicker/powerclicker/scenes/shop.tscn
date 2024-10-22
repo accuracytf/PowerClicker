@@ -115,13 +115,21 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -60.0
-offset_top = 10.0
+offset_top = 11.0
 offset_right = -8.0
-offset_bottom = 41.0
+offset_bottom = 42.0
 grow_horizontal = 0
 grow_vertical = 2
 text = "Sell
 "
+
+[node name="Label_Power" type="Label" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Solar"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 66.0
+offset_right = 62.0
+offset_bottom = 89.0
+text = "10kWd"
 
 [node name="TextureRect_Wind" type="TextureRect" parent="ScrollContainer_Green/VBoxContainer_Green"]
 layout_mode = 2
@@ -166,6 +174,13 @@ grow_vertical = 2
 text = "Sell
 "
 
+[node name="Label_Power" type="Label" parent="ScrollContainer_Green/VBoxContainer_Green/TextureRect_Wind"]
+offset_left = 9.0
+offset_top = 66.0
+offset_right = 62.0
+offset_bottom = 89.0
+text = "14.5MWd"
+
 [node name="Hydroelectric" type="TextureRect" parent="ScrollContainer_Green/VBoxContainer_Green"]
 layout_mode = 2
 texture = ExtResource("3_gpyaw")
@@ -208,6 +223,13 @@ grow_horizontal = 0
 grow_vertical = 2
 text = "Sell
 "
+
+[node name="Label_Power" type="Label" parent="ScrollContainer_Green/VBoxContainer_Green/Hydroelectric"]
+offset_left = 9.0
+offset_top = 66.0
+offset_right = 62.0
+offset_bottom = 89.0
+text = "89MWd"
 
 [node name="ScrollContainer_Red" type="ScrollContainer" parent="."]
 layout_mode = 0
@@ -266,6 +288,21 @@ grow_vertical = 2
 text = "Sell
 "
 
+[node name="Label_Power" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Coal"]
+offset_left = 9.0
+offset_top = 66.0
+offset_right = 62.0
+offset_bottom = 89.0
+text = "12GWd"
+
+[node name="Label_Coal" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Coal"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 40.0
+offset_right = 101.0
+offset_bottom = 63.0
+text = "13KTon/dag"
+
 [node name="TextureRect_Gas" type="TextureRect" parent="ScrollContainer_Red/VBoxContainer_Red"]
 layout_mode = 2
 texture = ExtResource("7_i7k7g")
@@ -310,6 +347,20 @@ grow_vertical = 2
 text = "Sell
 "
 
+[node name="Label_Power" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Gas"]
+offset_left = 9.0
+offset_top = 66.0
+offset_right = 62.0
+offset_bottom = 89.0
+text = "11.5GWd"
+
+[node name="Label_Coal" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Gas"]
+offset_left = 9.0
+offset_top = 40.0
+offset_right = 101.0
+offset_bottom = 63.0
+text = "5.2KTon/dag"
+
 [node name="TextureRect_Oil" type="TextureRect" parent="ScrollContainer_Red/VBoxContainer_Red"]
 layout_mode = 2
 texture = ExtResource("8_xjrjd")
@@ -353,6 +404,20 @@ grow_horizontal = 0
 grow_vertical = 2
 text = "Sell
 "
+
+[node name="Label_Power" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Oil"]
+offset_left = 9.0
+offset_top = 66.0
+offset_right = 62.0
+offset_bottom = 89.0
+text = "7.2GWd"
+
+[node name="Label_Coal" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Oil"]
+offset_left = 9.0
+offset_top = 40.0
+offset_right = 101.0
+offset_bottom = 63.0
+text = "5.7KTon/dag"
 
 [node name="SuccessSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_uh26e")
