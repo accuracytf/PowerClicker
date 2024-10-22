@@ -18,3 +18,4 @@ config/icon="res://icon.svg"
 [autoload]
 
 Globals="*res://scripts/Globals.gd"
+Varden="*res://scripts/Varden.gd"

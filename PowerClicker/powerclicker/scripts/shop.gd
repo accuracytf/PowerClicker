@@ -32,12 +32,12 @@ func _updateLabel(item: shopItem):
 
 func _ready() -> void:
 	
-	_initShopitem(buildings[0], "Solar", 10, 10, 1, 1.01, $ScrollContainer_Green/VBoxContainer_Green/TextureRect_Solar)
-	_initShopitem(buildings[1], "Wind Turbines", 100, 14500, 0.0002, 1.05, $ScrollContainer_Green/VBoxContainer_Green/TextureRect_Wind)
-	_initShopitem(buildings[2], "Hydroelectric", 1000, 89000, 0.00075, 1.09, $ScrollContainer_Green/VBoxContainer_Green/Hydroelectric)
-	_initShopitem(buildings[3], "Coal Powerplant", 100, 12000000, 13000, 1.2, $ScrollContainer_Red/VBoxContainer_Red/TextureRect_Coal)
-	_initShopitem(buildings[4], "Gas Powerplant", 100, 11520000, 5184, 1.2, $ScrollContainer_Red/VBoxContainer_Red/TextureRect_Gas)
-	_initShopitem(buildings[5], "Gas Powerplant", 100, 7200000, 5760, 1.2, $ScrollContainer_Red/VBoxContainer_Red/TextureRect_Oil)
+	_initShopitem(buildings[0], "Solar", Varden.solarPrice, 10, 0, Varden.solarScale, $ScrollContainer_Green/VBoxContainer_Green/TextureRect_Solar)
+	_initShopitem(buildings[1], "Wind Turbines", Varden.windPrice, 14500, 0, Varden.windScale, $ScrollContainer_Green/VBoxContainer_Green/TextureRect_Wind)
+	_initShopitem(buildings[2], "Hydroelectric", Varden.hydroPrice, 89000, 0, Varden.hydroScale, $ScrollContainer_Green/VBoxContainer_Green/Hydroelectric)
+	_initShopitem(buildings[3], "Coal Powerplant", Varden.coalPrice, 12000000, 13000, Varden.coalScale, $ScrollContainer_Red/VBoxContainer_Red/TextureRect_Coal)
+	_initShopitem(buildings[4], "Gas Powerplant", Varden.gasPrice, 11520000, 5184, Varden.gasScale, $ScrollContainer_Red/VBoxContainer_Red/TextureRect_Gas)
+	_initShopitem(buildings[5], "Oil Powerplant", Varden.oilPrice, 7200000, 5760, Varden.oilScale, $ScrollContainer_Red/VBoxContainer_Red/TextureRect_Oil)
 	
 	for building in buildings:
 		_updateLabel(building)
