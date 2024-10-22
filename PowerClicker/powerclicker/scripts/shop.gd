@@ -2,7 +2,8 @@ extends Control
 
 class shopItem:
 	var name: String
-	var price: float
+	var startPrice: float
+	var price : float
 	var amount = 0
 	var output: float
 	var CO2_output: float
@@ -20,6 +21,7 @@ var buildings = [solar, wind, hydro, coal, gas, oil]
 func _initShopitem(item: shopItem, name: String, price: int, output: float, CO2_output: float, priceScale: float, container: TextureRect):
 	item.name = name
 	item.price = price
+	item.startPrice = price
 	item.output = output
 	item.CO2_output = CO2_output
 	item.priceScale = priceScale
@@ -55,7 +57,7 @@ func _buy_button_pressed(building: shopItem):
 			Globals.greenkWd += building.output
 		Globals.kWd += building.output
 		Globals.CO2PerDay += building.CO2_output
-		building.price *= building.priceScale
+		building.price += building.priceScale * building.startPrice
 		building.amount += 1
 		_updateLabel(building)
 	else:
