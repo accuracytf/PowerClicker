@@ -59,12 +59,6 @@ func _buyMax(building: shopItem):
 	var b : float = 2 * m+k
 	var c : float = 2 * m - 2 * sum
 	
-	print(a)
-	print(b)
-	print(c)
-	
-	print(sqrt(pow(b, 2) - 4 * a * c))
-	
 	var x : int = floor((-b + sqrt(pow(b, 2) - 4 * a * c)) / (2 * a)) + 1
 	
 	if  x == 0:
