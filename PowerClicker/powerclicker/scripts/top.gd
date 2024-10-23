@@ -5,19 +5,19 @@ extends Control
 
 
 var timer: float = 0.0
-var duration: float = 10.0  # Duration for the progress to complete (in seconds)
 var procentage: float = 0.0
 
 func _ready() -> void:
-	label.text = "hej"
+	label.text = "0"
 	# Initialize the ProgressBar
 
 
 func _process(delta: float) -> void:
 	# Update the timer
 	timer += delta
-	if(timer>=1): 
+	if(timer>=0.5): 
+		timer =- 0.5
 		procentage += Globals.kWd/Globals.maxenergy
-		label.text = "You have produced \n" + str(procentage) + "\nof the energy requiered for the whole world during 1 year";
-		timer =- 1
+		label.text = str(procentage) 
+		
 	

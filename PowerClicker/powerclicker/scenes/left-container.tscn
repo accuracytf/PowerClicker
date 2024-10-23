@@ -43,7 +43,7 @@ offset_right = 168.0
 offset_bottom = 96.036
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_3rjei")
-text = "1/1-2025"
+text = "1/1/2025"
 label_settings = SubResource("LabelSettings_1s8f3")
 
 [node name="Date2" type="Sprite2D" parent="Date-Node"]
@@ -63,6 +63,7 @@ offset_bottom = 40.0
 
 [node name="Money" type="Label" parent="Money-Node"]
 z_index = 5
+layout_mode = 0
 offset_left = 65.0
 offset_top = 42.0
 offset_right = 216.0

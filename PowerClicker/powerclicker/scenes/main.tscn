@@ -139,10 +139,10 @@ offset_bottom = 149.0
 
 [node name="Control" parent="Top_container" instance=ExtResource("6_j4t0r")]
 layout_mode = 1
-offset_left = 58.0
-offset_top = 14.0
-offset_right = 79.896
-offset_bottom = 58.6
+offset_left = 230.0
+offset_top = 23.0
+offset_right = 251.896
+offset_bottom = 67.6
 
 [node name="Goals" type="Control" parent="."]
 layout_mode = 3
