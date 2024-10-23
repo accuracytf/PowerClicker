@@ -2,9 +2,9 @@ extends Node
 
 var seconds_passed: float = 0.0  # Total seconds elapsed
 var days_passed: int = 0          # Days counter
-var start_day: int = 5            # Starting day (5th)
-var start_month: int = 6          # Starting month (June)
-var start_year: int = 2024        # Starting year (2024)
+var start_day: int = 1        # Starting day (5th)
+var start_month: int = 1          # Starting month (June)
+var start_year: int = 2025        # Starting year (2024)
 
 func _process(delta: float) -> void:
 	seconds_passed += delta  # Increment seconds by the time since the last frame
@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 func update_label() -> void:
 	var current_date = calculate_date(start_day, start_month, start_year, days_passed)
 	var label = get_node("Date_Label")
-	label.text = "Date: " + current_date
+	label.text = current_date
 
 func calculate_date(start_day: int, start_month: int, start_year: int, days_passed: int) -> String:
 	# Calculate the current date

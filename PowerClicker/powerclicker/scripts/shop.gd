@@ -110,7 +110,7 @@ func _buy_button_pressed(building: shopItem):
 
 func _sell_button_pressed(building: shopItem):
 	if (building.amount > 0):
-		var sound = get_node("SuccessSound") ## Behöver nytt ljud för att sälja något
+		var sound = get_node("SellSound") ## Behöver nytt ljud för att sälja något
 		sound.play()
 		if building.name == "solar" or building.name == "Wind Turbines" or building.name == "Hydroelectric":
 			Globals.greenkWd -= building.output

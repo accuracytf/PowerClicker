@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://6fsynxc6h61t"]
+
+[ext_resource type="Script" path="res://scripts/date.gd" id="1_xyt7u"]
+[ext_resource type="FontFile" uid="uid://0kvgwnqhrp81" path="res://fonts/m5x7.ttf" id="2_3rjei"]
+[ext_resource type="Texture2D" uid="uid://dfdv2gorce6si" path="res://sprites/DATE.png" id="3_dtj0j"]
+[ext_resource type="Texture2D" uid="uid://dsn7wufmgm23f" path="res://sprites/date-icon.png" id="4_01kro"]
+[ext_resource type="Texture2D" uid="uid://cc55he5spkofv" path="res://sprites/money.png" id="4_omjbx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1s8f3"]
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gigge"]
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[node name="Info-Container" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Date-Node" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 76.0
+offset_right = 308.0
+offset_bottom = 234.0
+script = ExtResource("1_xyt7u")
+
+[node name="Date_Label" type="Label" parent="Date-Node"]
+z_index = 5
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.158
+anchor_bottom = 0.158
+offset_left = 40.0
+offset_top = 53.036
+offset_right = 168.0
+offset_bottom = 96.036
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_3rjei")
+text = "1/1-2025"
+label_settings = SubResource("LabelSettings_1s8f3")
+
+[node name="Date2" type="Sprite2D" parent="Date-Node"]
+position = Vector2(107, 94)
+scale = Vector2(0.338, 0.552)
+texture = ExtResource("3_dtj0j")
+
+[node name="Date-icon" type="Sprite2D" parent="Date-Node"]
+position = Vector2(58, 63)
+scale = Vector2(0.774725, 0.774725)
+texture = ExtResource("4_01kro")
+
+[node name="Money-Node" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Money" type="Label" parent="Money-Node"]
+z_index = 5
+offset_left = 65.0
+offset_top = 42.0
+offset_right = 216.0
+offset_bottom = 82.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_3rjei")
+text = "0"
+label_settings = SubResource("LabelSettings_gigge")
+autowrap_mode = 1
+
+[node name="Money2" type="Sprite2D" parent="Money-Node"]
+position = Vector2(107, 61)
+scale = Vector2(0.692, 0.692)
+texture = ExtResource("4_omjbx")

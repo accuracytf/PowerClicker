@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://de2me0flre225"]
+[gd_scene load_steps=26 format=3 uid="uid://de2me0flre225"]
 
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_fi3cu"]
 [ext_resource type="Texture2D" uid="uid://bysm55af4fytu" path="res://sprites/shop.png" id="2_g3k05"]
@@ -7,10 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://df1pyxqf8euvn" path="res://sprites/windturbine.png" id="3_ooq4s"]
 [ext_resource type="Texture2D" uid="uid://bck0goejrc26e" path="res://sprites/coal_power.png" id="5_4s3d7"]
 [ext_resource type="Texture2D" uid="uid://c0hdr7flyhdtw" path="res://sprites/gas_power.png" id="7_i7k7g"]
-[ext_resource type="AudioStream" uid="uid://tfmwghrwbavi" path="res://sound/cash-register-purchase-87313.mp3" id="8_uh26e"]
 [ext_resource type="Texture2D" uid="uid://cdeinnrh1wqib" path="res://sprites/oil_power.png" id="8_xjrjd"]
-[ext_resource type="AudioStream" uid="uid://b7dyoerw1gfy2" path="res://sound/error-126627.mp3" id="9_ltyuj"]
+[ext_resource type="AudioStream" uid="uid://cnnkosfblta7j" path="res://sound/cash-register-purchase-87313 (mp3cut.net).mp3" id="9_ogucu"]
+[ext_resource type="AudioStream" uid="uid://3nenljrn8cuc" path="res://sound/error-126627 (mp3cut.net).mp3" id="10_rpddu"]
 [ext_resource type="Texture2D" uid="uid://c4fjvmui0mr4" path="res://sprites/outline.png" id="11_80wua"]
+[ext_resource type="AudioStream" uid="uid://bb2te4omn3siy" path="res://sound/preview (mp3cut.net).mp3" id="12_lv342"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3jcr"]
 
@@ -428,10 +429,10 @@ offset_bottom = 63.0
 text = "5.7KTon/dag"
 
 [node name="SuccessSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_uh26e")
+stream = ExtResource("9_ogucu")
 
 [node name="ErrorSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_ltyuj")
+stream = ExtResource("10_rpddu")
 
 [node name="BuyMax" type="Button" parent="."]
 layout_mode = 0
@@ -442,6 +443,7 @@ offset_bottom = 163.0
 flat = true
 
 [node name="TextureRect" type="TextureRect" parent="BuyMax"]
+layout_mode = 0
 offset_right = 97.0
 offset_bottom = 59.0
 texture = ExtResource("11_80wua")
@@ -459,6 +461,9 @@ layout_mode = 0
 offset_right = 97.0
 offset_bottom = 59.0
 texture = ExtResource("11_80wua")
+
+[node name="SellSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_lv342")
 
 [connection signal="pressed" from="BuyMax" to="." method="_on_buy_max_pressed"]
 [connection signal="pressed" from="BuyOne" to="." method="_on_buy_one_pressed"]
