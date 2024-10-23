@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 	seconds_passed += delta  # Increment seconds by the time since the last frame
 	if seconds_passed >= 0.25:
 		seconds_passed -= 0.25
-		animation.set_speed_scale(sqrt(clicks))
+		animation.set_speed_scale(sqrt(clicks*2))
 		
 		wheel_rotation += clicks
 		if wheel_rotation > 36:

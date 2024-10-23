@@ -97,7 +97,8 @@ func _ready() -> void:
 		_updateLabel(building)
 		building.container.get_node("Button").connect("pressed", Callable(self, "_buy_button_pressed").bind(building))
 		building.container.get_node("Button2").connect("pressed", Callable(self, "_sell_button_pressed").bind(building))
-
+	
+	get_node("BuyMax/TextureRect").hide()
 
 func _buy_button_pressed(building: shopItem):
 	
@@ -126,7 +127,11 @@ func _sell_button_pressed(building: shopItem):
 
 func _on_buy_max_pressed() -> void:
 	buyOne = false
+	get_node("BuyOne/TextureRect").hide()
+	get_node("BuyMax/TextureRect").show()
 
 
 func _on_buy_one_pressed() -> void:
 	buyOne = true
+	get_node("BuyMax/TextureRect").hide()
+	get_node("BuyOne/TextureRect").show()

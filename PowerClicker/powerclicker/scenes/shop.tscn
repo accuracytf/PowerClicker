@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://de2me0flre225"]
+[gd_scene load_steps=25 format=3 uid="uid://de2me0flre225"]
 
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_fi3cu"]
 [ext_resource type="Texture2D" uid="uid://bysm55af4fytu" path="res://sprites/shop.png" id="2_g3k05"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://tfmwghrwbavi" path="res://sound/cash-register-purchase-87313.mp3" id="8_uh26e"]
 [ext_resource type="Texture2D" uid="uid://cdeinnrh1wqib" path="res://sprites/oil_power.png" id="8_xjrjd"]
 [ext_resource type="AudioStream" uid="uid://b7dyoerw1gfy2" path="res://sound/error-126627.mp3" id="9_ltyuj"]
+[ext_resource type="Texture2D" uid="uid://c4fjvmui0mr4" path="res://sprites/outline.png" id="11_80wua"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3jcr"]
 
@@ -69,10 +70,10 @@ texture = ExtResource("2_g3k05")
 
 [node name="ScrollContainer_Green" type="ScrollContainer" parent="."]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 106.0
-offset_right = 191.0
-offset_bottom = 358.0
+offset_left = 7.0
+offset_top = 169.0
+offset_right = 193.0
+offset_bottom = 399.0
 theme = SubResource("Theme_spnmi")
 
 [node name="VBoxContainer_Green" type="VBoxContainer" parent="ScrollContainer_Green"]
@@ -235,10 +236,10 @@ text = "89MWd"
 
 [node name="ScrollContainer_Red" type="ScrollContainer" parent="."]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 378.0
-offset_right = 190.0
-offset_bottom = 634.0
+offset_left = 7.0
+offset_top = 411.0
+offset_right = 193.0
+offset_bottom = 641.0
 theme = SubResource("Theme_i51tm")
 
 [node name="VBoxContainer_Red" type="VBoxContainer" parent="ScrollContainer_Red"]
@@ -434,18 +435,30 @@ stream = ExtResource("9_ltyuj")
 
 [node name="BuyMax" type="Button" parent="."]
 layout_mode = 0
-offset_left = 112.0
-offset_top = 58.0
-offset_right = 187.0
-offset_bottom = 89.0
-text = "Buy Max"
+offset_left = 100.0
+offset_top = 104.0
+offset_right = 199.0
+offset_bottom = 163.0
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="BuyMax"]
+offset_right = 97.0
+offset_bottom = 59.0
+texture = ExtResource("11_80wua")
 
 [node name="BuyOne" type="Button" parent="."]
-offset_left = 135.0
-offset_top = 20.0
-offset_right = 186.0
-offset_bottom = 51.0
-text = "Buy 1"
+layout_mode = 0
+offset_left = 2.0
+offset_top = 104.0
+offset_right = 98.0
+offset_bottom = 163.0
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="BuyOne"]
+layout_mode = 0
+offset_right = 97.0
+offset_bottom = 59.0
+texture = ExtResource("11_80wua")
 
 [connection signal="pressed" from="BuyMax" to="." method="_on_buy_max_pressed"]
 [connection signal="pressed" from="BuyOne" to="." method="_on_buy_one_pressed"]

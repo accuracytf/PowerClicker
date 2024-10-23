@@ -28,5 +28,5 @@ func _process(delta: float) -> void:
 	
 
 func _update_money():
-	# Globals.money += Globals.kWd / 10
+	Globals.money += Globals.kWd / 10
 	get_node("Left_Container/Money").text = "Money: " + Globals.suffix(Globals.money)
