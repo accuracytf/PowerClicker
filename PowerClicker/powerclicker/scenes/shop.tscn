@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://de2me0flre225"]
+[gd_scene load_steps=35 format=3 uid="uid://de2me0flre225"]
 
 [ext_resource type="Script" path="res://scripts/shop.gd" id="1_fi3cu"]
 [ext_resource type="Texture2D" uid="uid://bysm55af4fytu" path="res://sprites/shop.png" id="2_g3k05"]
@@ -33,6 +33,15 @@ VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_bt1hp")
 [sub_resource type="LabelSettings" id="LabelSettings_ivymj"]
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_x7xl2"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tuk0p"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dl1c3"]
+font_color = Color(0, 0, 0, 1)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_srhg0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tufnj"]
@@ -49,6 +58,24 @@ VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_tufnj")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_272du")
 VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_7exh1")
 VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_11bn3")
+
+[sub_resource type="LabelSettings" id="LabelSettings_eluym"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v86po"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qhicw"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4th3c"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_js0l4"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3sli8"]
+font_color = Color(0, 0, 0, 1)
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -132,6 +159,7 @@ offset_top = 66.0
 offset_right = 62.0
 offset_bottom = 89.0
 text = "10kWd"
+label_settings = SubResource("LabelSettings_x7xl2")
 
 [node name="TextureRect_Wind" type="TextureRect" parent="ScrollContainer_Green/VBoxContainer_Green"]
 layout_mode = 2
@@ -183,6 +211,7 @@ offset_top = 66.0
 offset_right = 62.0
 offset_bottom = 89.0
 text = "14.5MWd"
+label_settings = SubResource("LabelSettings_tuk0p")
 
 [node name="Hydroelectric" type="TextureRect" parent="ScrollContainer_Green/VBoxContainer_Green"]
 layout_mode = 2
@@ -234,6 +263,7 @@ offset_top = 66.0
 offset_right = 62.0
 offset_bottom = 89.0
 text = "89MWd"
+label_settings = SubResource("LabelSettings_dl1c3")
 
 [node name="ScrollContainer_Red" type="ScrollContainer" parent="."]
 layout_mode = 0
@@ -299,6 +329,7 @@ offset_top = 66.0
 offset_right = 62.0
 offset_bottom = 89.0
 text = "12GWd"
+label_settings = SubResource("LabelSettings_eluym")
 
 [node name="Label_Coal" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Coal"]
 layout_mode = 0
@@ -307,6 +338,7 @@ offset_top = 40.0
 offset_right = 101.0
 offset_bottom = 63.0
 text = "13KTon/dag"
+label_settings = SubResource("LabelSettings_v86po")
 
 [node name="TextureRect_Gas" type="TextureRect" parent="ScrollContainer_Red/VBoxContainer_Red"]
 layout_mode = 2
@@ -359,6 +391,7 @@ offset_top = 66.0
 offset_right = 62.0
 offset_bottom = 89.0
 text = "11.5GWd"
+label_settings = SubResource("LabelSettings_qhicw")
 
 [node name="Label_Coal" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Gas"]
 layout_mode = 0
@@ -367,6 +400,7 @@ offset_top = 40.0
 offset_right = 101.0
 offset_bottom = 63.0
 text = "5.2KTon/dag"
+label_settings = SubResource("LabelSettings_4th3c")
 
 [node name="TextureRect_Oil" type="TextureRect" parent="ScrollContainer_Red/VBoxContainer_Red"]
 layout_mode = 2
@@ -419,6 +453,7 @@ offset_top = 66.0
 offset_right = 62.0
 offset_bottom = 89.0
 text = "7.2GWd"
+label_settings = SubResource("LabelSettings_js0l4")
 
 [node name="Label_Coal" type="Label" parent="ScrollContainer_Red/VBoxContainer_Red/TextureRect_Oil"]
 layout_mode = 0
@@ -427,6 +462,7 @@ offset_top = 40.0
 offset_right = 101.0
 offset_bottom = 63.0
 text = "5.7KTon/dag"
+label_settings = SubResource("LabelSettings_3sli8")
 
 [node name="SuccessSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_ogucu")

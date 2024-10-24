@@ -20,3 +20,6 @@ func suffix(value : float) -> String:
 		value /= 100
 	
 	return str(value) + valor[valorIndex]
+
+
+	

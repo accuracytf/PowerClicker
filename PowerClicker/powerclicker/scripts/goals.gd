@@ -1,27 +1,36 @@
 extends Control
 var seconds_passed = 0;
 var labelnode = null
+var labelnode2 = null
 var node = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	labelnode = get_node("Label")
-	pass # Replace with function body.
+	labelnode2 = get_node("Label2")
+	pass # Replace withfunction body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
-	if(Globals.kWd>6458333333):
-		labelnode.text = "Nu kan du producerar du 6458333333 kWd vilket är lika mycket som sverige under ett år"
-	elif(Globals.kWd>65753424):
-		labelnode.text = "Nu kan du driva Google som drar ca 65753424 kWd"
-	elif(Globals.kWd>8333):
-		labelnode.text ="Nu kan du driva en skola på 5 000 m2 som drar ungefär 8333 kWd. "
-	elif(Globals.kWd>1042):
-		labelnode.text = "Det krävs cirka 1042 kWh för att värma upp ett håshåll i ett år"
-	elif(Globals.kWd>55):
-		labelnode.text = "Nu kan du driva en villa i sverige som i genomsnitt drar 55 kWd"
-	elif(Globals.kWd>0.6):
-		labelnode.text = "Nu kan du driva en plasma TV med 400 Watt i timmen som drar 0.6 kWd"
+	if(Globals.greenkWd>6458333333):
+		labelnode.text = "You produce the green energy 6458333333 kWd which is tha same as Sweden during one year"
+	elif(Globals.greenkWd>65753424):
+		labelnode.text = "You produce the green energy to run Google"
+	elif(Globals.greenkWd>28200):
+		labelnode.text = "You produce the green energy to travel the Öresundslinje every day"
+	elif(Globals.greenkWd>8333):
+		labelnode.text ="You produce the green energy to run a school that is 5 000 m2"
+	elif(Globals.greenkWd>32.8):
+		labelnode.text = "You produce the green energy to heat a house"
+	elif(Globals.greenkWd>0.6):
+		labelnode.text = "You produce the green energy to use a plasma TV"
 	
-	pass
+	
+	if(Globals.CO2PerDay>28_800_000):
+		labelnode2.text = "You now release as much CO2 as all the cars in sweden"
+	elif(Globals.CO2PerDay>121000):
+		labelnode2.text = "You now release as much CO2 as Sweden does"
+	if(Globals.CO2PerDay>77000):
+		labelnode2.text = "You now release as much CO2 per day as all privates boats in Sweden does in a year"
+	

@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 func _on_click() -> void:
 	var labeltext = get_node("../../Left_Container/Info-Container/Money-Node/Money")
 	Globals.money = Globals.money + 1
-	labeltext.text = Globals.suffix(Globals.money)
+	labeltext.text = Globals.suffix(floor(Globals.money))
 	var click_sound = get_node("ClickSound")
 	click_sound.play()
 	clicks += 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b1m33vb1mh7wr"]
+[gd_scene load_steps=24 format=3 uid="uid://b1m33vb1mh7wr"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_18q3u"]
 [ext_resource type="PackedScene" uid="uid://de2me0flre225" path="res://scenes/shop.tscn" id="1_54ehq"]
@@ -17,6 +17,22 @@
 [ext_resource type="Texture2D" uid="uid://cxoqull6c231w" path="res://sprites/hamster_gif/pixil-frame-6.png" id="14_kfdcv"]
 [ext_resource type="Texture2D" uid="uid://617rc2ou0i7w" path="res://sprites/hamster_gif/pixil-frame-7.png" id="15_jo7qb"]
 [ext_resource type="Texture2D" uid="uid://d4brjl3e0fkdb" path="res://sprites/hamster_gif/pixil-frame-8.png" id="16_2iad8"]
+[ext_resource type="Texture2D" uid="uid://duls4r0txb8rd" path="res://sprites/Temperature.png" id="18_kj3qe"]
+[ext_resource type="FontFile" uid="uid://0kvgwnqhrp81" path="res://fonts/m5x7.ttf" id="19_g7nnc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cnqbk"]
+font = ExtResource("19_g7nnc")
+font_size = 250
+font_color = Color(0.0421167, 0.528805, 0, 1)
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_t45hi"]
+font = ExtResource("19_g7nnc")
+font_size = 250
+font_color = Color(1, 0, 0, 1)
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5akra"]
 animations = [{
@@ -53,6 +69,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_7s7xa"]
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -61,6 +81,34 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_18q3u")
+
+[node name="win_label" type="Label" parent="."]
+visible = false
+z_index = 10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOU WIN"
+label_settings = SubResource("LabelSettings_cnqbk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lose_label" type="Label" parent="."]
+visible = false
+z_index = 10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOU LOSE"
+label_settings = SubResource("LabelSettings_t45hi")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -5
@@ -132,10 +180,10 @@ z_index = 1
 custom_minimum_size = Vector2(752, 150)
 layout_mode = 1
 anchors_preset = 0
-offset_left = 209.0
-offset_top = -1.0
-offset_right = 961.0
-offset_bottom = 149.0
+offset_left = 167.0
+offset_top = -11.0
+offset_right = 919.0
+offset_bottom = 139.0
 
 [node name="Control" parent="Top_container" instance=ExtResource("6_j4t0r")]
 layout_mode = 1
@@ -148,9 +196,9 @@ offset_bottom = 67.6
 layout_mode = 3
 anchors_preset = 0
 offset_left = 17.0
-offset_top = 272.0
+offset_top = 362.0
 offset_right = 282.0
-offset_bottom = 407.0
+offset_bottom = 497.0
 
 [node name="Side-box" parent="Goals" instance=ExtResource("8_8f3xx")]
 layout_mode = 1
@@ -158,3 +206,29 @@ offset_left = -3.0
 offset_top = -50.0
 offset_right = -36.0
 offset_bottom = 113.0
+
+[node name="Temperature" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 205.0
+offset_right = 40.0
+offset_bottom = 245.0
+
+[node name="TextureRect" type="TextureRect" parent="Temperature"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 27.0
+offset_right = 192.0
+offset_bottom = 95.0
+texture = ExtResource("18_kj3qe")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Temperature"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 34.0
+offset_right = 185.0
+offset_bottom = 86.0
+theme_override_fonts/font = ExtResource("19_g7nnc")
+text = "+0"
+label_settings = SubResource("LabelSettings_7s7xa")
+vertical_alignment = 1

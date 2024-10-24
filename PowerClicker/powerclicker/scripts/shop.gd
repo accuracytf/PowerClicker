@@ -31,7 +31,7 @@ func _initShopitem(item: shopItem, name: String, price: int, output: float, CO2_
 
 func _updateLabel(item: shopItem):
 	item.container.get_node("Label").text = item.name + " " + str(item.amount)
-	item.container.get_node("Button").text = Globals.suffix(ceil(item.price)) + "kr"
+	item.container.get_node("Button").text = Globals.suffix(ceil(item.price))
 
 func _buyOne(building: shopItem, playSound: bool = true): 
 	if (Globals.money >= building.price):
@@ -39,7 +39,7 @@ func _buyOne(building: shopItem, playSound: bool = true):
 			var sound = get_node("SuccessSound")
 			sound.play()
 		Globals.money -= building.price
-		if building.name == "solar" or building.name == "Wind Turbines" or building.name == "Hydroelectric":
+		if building.name == "Solar" or building.name == "Wind Turbines" or building.name == "Hydroelectric":
 			Globals.greenkWd += building.output
 		Globals.kWd += building.output
 		Globals.CO2PerDay += building.CO2_output
@@ -69,7 +69,7 @@ func _buyMax(building: shopItem):
 	var totalPrice : float = (x) * (2 * m + k * (x - 1)) / 2
 	
 	Globals.money -= totalPrice
-	if building.name == "solar" or building.name == "Wind Turbines" or building.name == "Hydroelectric":
+	if building.name == "Solar" or building.name == "Wind Turbines" or building.name == "Hydroelectric":
 		Globals.greenkWd += building.output * x
 	Globals.kWd += building.output * x
 	Globals.CO2PerDay += building.CO2_output * x
@@ -106,7 +106,7 @@ func _sell_button_pressed(building: shopItem):
 	if (building.amount > 0):
 		var sound = get_node("SellSound") ## Behöver nytt ljud för att sälja något
 		sound.play()
-		if building.name == "solar" or building.name == "Wind Turbines" or building.name == "Hydroelectric":
+		if building.name == "Solar" or building.name == "Wind Turbines" or building.name == "Hydroelectric":
 			Globals.greenkWd -= building.output
 			
 		Globals.kWd -= building.output
